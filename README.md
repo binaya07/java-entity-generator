@@ -4,25 +4,28 @@ Generates a Java entity class from the list of columns provided using JPA specif
 
 Run `python generate.py`
 
-Provide class name and column names 
+Provide class name and column names
+
 ```
 Enter class name : test
-Enter columns as comma separated values (eg column1, column2) : a, b , c
-```
-
+Enter columns as comma separated values (eg column1, column2) : "CLONE" VARCHAR2(4000 BYTE), "PROTEIN" VARCHAR2(4000 BYTE), "TARGET_GENE" VARCHAR2(4000 BYTE)
 Generates Test.java file as below
 
 ```
+
 public class Test {
 
-@Column(name="a")
-private String a;
+@Column(name="CLONE")
+private String clone;
 
-@Column(name="b")
-private String b;
+@Column(name="PROTEIN")
+private String protein;
 
-@Column(name="c")
-private String c;
+@Column(name="TARGET_GENE")
+private String targetgene;
 
 }
+
+```
+
 ```
